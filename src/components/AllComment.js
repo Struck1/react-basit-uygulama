@@ -3,6 +3,7 @@ import CommentList from "./CommentList";
 import CommentForm from "./CommentForm";
 
 const AllComment = (props) => {
+  console.log(props);
   return (
     <React.Fragment>
       <CommentList comments={props.comments} />

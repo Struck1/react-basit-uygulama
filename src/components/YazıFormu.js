@@ -39,10 +39,6 @@ const YazıFormu = (props) => {
     setYazı({ ...yazı, [event.target.name]: event.target.value });
   };
 
-  useEffect(() => {
-    if (props.yazı.title && props.yazı.content) setYazı(props.yazı);
-  }, [props.yazı]);
-
   return (
     <form className="was-validated">
       <div className="mb-3 ">

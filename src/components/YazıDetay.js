@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import AllComment from "./AllComment";
 import { Link } from "react-router-dom";
+import SilModal from "./SilModal";
 
 const YazıDetay = (props) => {
   const [detailList, setDetailList] = useState({});
@@ -47,11 +48,13 @@ const YazıDetay = (props) => {
           >
             Düzenle
           </Link>
-          <button type="button" className="btn btn-danger ">
-            Sil
-          </button>
+          <SilModal yazı={detailList} push={props.history.push} />
 
-          <AllComment comments={comments} handleSubmit={handleCommentSubmit} />
+          <AllComment
+            comments={comments}
+            handleSubmit={handleCommentSubmit}
+        
+          />
         </div>
       </div>
     </React.Fragment>

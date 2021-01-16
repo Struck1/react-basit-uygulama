@@ -9,7 +9,6 @@ const CommentForm = (props) => {
 
   console.log(props);
 
-
   const handleOnChange = (event) => {
     setCommentBoyd({
       ...commentBody,
